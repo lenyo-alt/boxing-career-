@@ -14,7 +14,7 @@
             text-align: center;
         }
 
-        .startseite {
+        .seite {
             min-height: 100vh;
             display: flex;
             flex-direction: column;
@@ -23,46 +23,93 @@
         }
 
         h1 {
-            font-size: 48px;
-            margin-bottom: 10px;
-        }
-
-        p {
-            color: #aaa;
-            font-size: 18px;
+            font-size: 45px;
         }
 
         button {
-            margin-top: 30px;
-            padding: 15px 40px;
-            font-size: 20px;
+            margin-top: 25px;
+            padding: 15px 35px;
+            font-size: 18px;
             font-weight: bold;
             border: none;
             border-radius: 10px;
             background: #e53935;
             color: white;
-            cursor: pointer;
         }
 
-        button:hover {
-            background: #ff5252;
+        input, select {
+            padding: 14px;
+            margin: 8px;
+            font-size: 17px;
+            border-radius: 8px;
+            border: none;
+        }
+
+        #boxerErstellen {
+            display: none;
         }
     </style>
 </head>
 
 <body>
 
-    <div class="startseite">
+    <div id="startseite" class="seite">
         <h1>🥊 BOXING CAREER</h1>
         <p>Baue deine eigene Boxkarriere auf.</p>
 
-        <button onclick="startGame()">NEUE KARRIERE</button>
+        <button onclick="neueKarriere()">
+            NEUE KARRIERE
+        </button>
     </div>
 
+
+    <div id="boxerErstellen" class="seite">
+        <h1>👤 DEIN BOXER</h1>
+
+        <input
+            id="boxerName"
+            type="text"
+            placeholder="Name deines Boxers"
+        >
+
+        <select id="gewicht">
+            <option>Leichtgewicht</option>
+            <option>Weltergewicht</option>
+            <option>Mittelgewicht</option>
+            <option>Halbschwergewicht</option>
+            <option>Schwergewicht</option>
+        </select>
+
+        <button onclick="boxerStarten()">
+            KARRIERE STARTEN
+        </button>
+    </div>
+
+
     <script>
-        function startGame() {
-            alert("Deine Karriere beginnt!");
+
+        function neueKarriere() {
+
+            document.getElementById("startseite").style.display = "none";
+
+            document.getElementById("boxerErstellen").style.display = "flex";
+
         }
+
+
+        function boxerStarten() {
+
+            let name = document.getElementById("boxerName").value;
+
+            if (name === "") {
+                alert("Gib zuerst einen Namen ein!");
+                return;
+            }
+
+            alert("Willkommen " + name + "! 🥊");
+
+        }
+
     </script>
 
 </body>

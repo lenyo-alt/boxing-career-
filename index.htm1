@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boxing Career</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #111;
+            color: white;
+            text-align: center;
+        }
+
+        .startseite {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        h1 {
+            font-size: 48px;
+            margin-bottom: 10px;
+        }
+
+        p {
+            color: #aaa;
+            font-size: 18px;
+        }
+
+        button {
+            margin-top: 30px;
+            padding: 15px 40px;
+            font-size: 20px;
+            font-weight: bold;
+            border: none;
+            border-radius: 10px;
+            background: #e53935;
+            color: white;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #ff5252;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="startseite">
+        <h1>🥊 BOXING CAREER</h1>
+        <p>Baue deine eigene Boxkarriere auf.</p>
+
+        <button onclick="startGame()">NEUE KARRIERE</button>
+    </div>
+
+    <script>
+        function startGame() {
+            alert("Deine Karriere beginnt!");
+        }
+    </script>
+
+</body>
+</html>
